@@ -1,4 +1,4 @@
-# chatbot_app.py
+
 
 import streamlit as st
 from mistralai import Mistral
@@ -19,7 +19,7 @@ def generate_response(user_input):
             messages=[
                 {
                     "role": "system",
-                    "content": "Répondez toujours sous forme de vers poétiques, peu importe la question posée."
+                    "content": "Répondez toujours comme un pirate sous forme de vers poétiques , peu importe la question posée."
                 },
                 {
                     "role": "user",
@@ -33,8 +33,8 @@ def generate_response(user_input):
         return f"Erreur lors de la génération de la réponse : {str(e)}"
 
 # Titre de l'application
-st.title("Chatbot Poétique avec Streamlit et Mistral")
-st.write("Bienvenue sur l'interface de chatbot poétique. Posez-moi des questions et je vous répondrai en vers !")
+st.title("Chatbot Pirate Poétique")
+st.write("Bienvenue sur l'interface de chatbot pirate. Posez-moi des questions et je vous répondrai en vers !")
 
 # Sauvegarde de l'historique des conversations
 if 'chat_history' not in st.session_state:
